@@ -36,11 +36,6 @@ time, mark, audio, video {
   }
 }
 
-
-/* header:hover {
-  padding: 2%;
-} */
-
 html {
   height: 100%;
   font-size: 62.5%;
@@ -55,27 +50,21 @@ a {
   color: white;
 }
 
-a:hover {
-  color: rgb(149, 185, 196);
-}
-
 .menu {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
-  border: 1px solid black;
   font-size: 3rem;
-  background-color: #48595E;
   padding: 10px 5px 10px 15px;
   background-color: #0D0D0D;
-  box-shadow: 5px 5px 8px #888888;
-  
+  box-shadow: 5px 5px 8px 5px #888888;
+  max-width: 100%;
 }
 
 .menu_item {
   font-size: 3rem;
    /*keyframes animation starts here*/
   animation-name: animation-menu-item;
-  animation-duration: 2s;
+  animation-duration: 4s;
   
 }
 
@@ -109,6 +98,8 @@ a:hover {
 .menu-item-anchor {
   text-decoration: none;
   color: white;
+  font-size: 3rem;
+  transition: font-size 2s;
 }
 
 @keyframes make-smaller {
@@ -117,9 +108,10 @@ a:hover {
 }
 
 .menu-item-anchor:hover{
-  color: #A6A6A6 ;
+  color: #A6A6A6;
   animation-name: make-smaller;
   animation-duration: 1s;
+  font-size: 3.1rem;
 }
 
 /* .images-landing-page {
@@ -174,8 +166,19 @@ footer {
   margin-top: 3%;
   position: fixed;
   background-color: #0D0D0D;
+  box-shadow: 15px 5px 8px #888888;
+  /*keyframes animation starts here*/
+  animation-name: animation-menu-item;
+  animation-duration: 4s;
   
 }
+
+@keyframes animation-menu-item {
+  from {font-size: 3rem; opacity: 0;}
+  to {font-size: 3rem; opacity: 1;}
+  /*keyframe animation eds here*/
+}
+
 
 .pricing-title  {
   display: flex; 
@@ -318,8 +321,8 @@ table {
   justify-self:flex-start;
   width: 50%;
    /*keyframes animation starts here*/
-   animation-name: animation-menu-item;
-   animation-duration: 2s;
+  animation-name: animation-menu-item;
+  animation-duration: 2s;
    /*keyframe animation eds here*/
  }
  
@@ -362,12 +365,6 @@ label {
   to {font-size: 3rem; opacity: 1;}
 }
 
-
-
-.menu-item {
-	
-}
-
 input[type=text]{
   width: 200px;
   transition: ease-in-out, width .35s ease-in-out;
@@ -375,4 +372,8 @@ input[type=text]{
 
 input[type=text]:focus {
   width: 250px;
+}
+
+.logo-title {
+	position: absolute;
 }
