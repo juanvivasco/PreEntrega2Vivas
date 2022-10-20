@@ -113,6 +113,10 @@ a {
   font-size: 3rem;
 }
 
+.menu-item-anchor-pricing:hover {
+  color: white;
+}
+
 .menu-item-anchor:hover{
   color: #A6A6A6;
   animation-name: make-smaller;
@@ -388,7 +392,7 @@ input[type=text]:focus {
 
 .contact-me-nav {position: absolute;}
 
-.table-standard:hover {
+.table-animation:hover {
   animation-name: rounded-circle-zoom;
   animation-duration: 5s;
   animation-delay: 0s;
@@ -400,3 +404,4 @@ input[type=text]:focus {
   50% {transform: scale(1.1); opacity: 1;}
   100% {transform: scale(1);}
 }
+/*The End*/
