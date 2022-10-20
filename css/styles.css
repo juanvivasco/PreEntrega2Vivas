@@ -27,14 +27,11 @@ time, mark, audio, video {
   font-style: normal
 }
 
-@media only screen and (max-width: 400px) {
-  body {
-    background-color: #ffffff; /* Red */
-  }
-  header {
-    width: 100%;
-  }
-}
+/* @media screen and (max-width:576px) {
+  header{
+      grid-template-columns: 1fr;
+      font-size: 2rem;}
+  } */
 
 html {
   height: 100%;
@@ -54,24 +51,30 @@ a {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
   font-size: 3rem;
-  padding: 10px 5px 10px 15px;
+  padding: 10px 5px 10px 5px;
   background-color: #0D0D0D;
   box-shadow: 5px 5px 8px 5px #888888;
+  max-width: 100%;
 }
 
 .menu_item {
   font-size: 3rem;
    /*keyframes animation starts here*/
   animation-name: animation-menu-item;
-  animation-duration: 4s;
+  animation-duration: 3.3s;
+  
   
 }
 
 @keyframes animation-menu-item {
-  from {font-size: 3rem; opacity: 0;}
-  to {font-size: 3rem; opacity: 1;}
+  from {opacity: 0;}
+  to {opacity: 1;}
   /*keyframe animation eds here*/
 }
+
+/* @media (min-width: 600px) {
+  .menu { grid-template-columns: 1fr 1fr;}
+} */
 
 
 .titulo-page {
@@ -81,17 +84,16 @@ a {
   font-size: 3rem; 
   flex-wrap: wrap;
   font-weight: bold;
-  color: #0D0D0D;
-  
-  /*keyframes animation starts here*/
-  animation-name: animation-titulo-landing-page;
-  animation-duration: 3s;
-  /*keyframe animation eds here*/
+  color: #0D0D0D; animation-name: about-me;
+  animation-duration: 4s;
+  animation-delay: s;
 }
-
-@keyframes animation-titulo-landing-page {
-  from {font-size: 3rem; opacity: 0;}
-  to {font-size: 3rem; opacity: 1;}
+  
+@keyframes about-me{
+  0% {opacity: 0;}
+  25% {opacity: 0.3;}
+  50% {opacity: 0.6;}
+  75% {opacity: 1;}
 }
 
 .menu-item-anchor {
@@ -104,6 +106,15 @@ a {
 @keyframes make-smaller {
   from{opacity: 1;}
   to {opacity: 0.85;}
+}
+.menu-item-anchor-pricing {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+}
+
+.menu-item-anchor-pricing:hover {
+  color: white;
 }
 
 .menu-item-anchor:hover{
@@ -135,8 +146,18 @@ a {
   flex-wrap: wrap;
   font-weight: bold;
   color: #0D0D0D;
+  animation-name: about-me;
+  animation-duration: 4s;
+  animation-delay: s;
 }
   
+@keyframes about-me{
+  0% {opacity: 0;}
+  25% {opacity: 0.3;}
+  50% {opacity: 0.6;}
+  75% {opacity: 1;}
+}
+
 .content-about-me {
   display:grid;
   grid-template-columns: 1fr 3fr;
@@ -153,12 +174,11 @@ a {
 
 footer {
   display: flex;
-  background-color:#48595E;
   color: white;
   width: 100%;
   position: relative;
   bottom: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   flex-wrap: wrap;
   justify-content:space-between;
   align-items: center;
@@ -166,20 +186,8 @@ footer {
   position: fixed;
   background-color: #0D0D0D;
   box-shadow: 15px 5px 8px #888888;
-  /*keyframes animation starts here*/
-  animation-name: animation-menu-item;
-  animation-duration: 4s;
-  
 }
 
-@keyframes animation-menu-item {
-  from {font-size: 3rem; opacity: 0;}
-  to {font-size: 3rem; opacity: 1;}
-  /*keyframe animation eds here*/
-}
-
-  
-}
 
 .pricing-title  {
   display: flex; 
@@ -339,6 +347,7 @@ table {
   border-radius: 5% ;
   margin: auto;
   background-color: #0D0D0D;
+  font-size: 2rem;
 }
 
 label {
@@ -356,20 +365,16 @@ label {
 
 .rounded-circle {
 	border-radius: 50%;
-  animation-name: animation-titulo-landing-page;
+  animation-name: rounded-circle-zoom;
   animation-duration: 3s;
+  animation-delay: s;
   /*keyframe animation eds here*/
 }
 
-@keyframes animation-titulo-landing-page {
-  from {font-size: 3rem; opacity: 0;}
-  to {font-size: 3rem; opacity: 1;}
-}
-
-
-
-.menu-item {
-	
+@keyframes rounded-circle-zoom {
+  0%{transform: scale(1); opacity: 0;}
+  50% {transform: scale(1.1); opacity: 1;}
+  100% {transform: scale(1);}
 }
 
 input[type=text]{
@@ -384,3 +389,19 @@ input[type=text]:focus {
 .logo-title {
 	position: absolute;
 }
+
+.contact-me-nav {position: absolute;}
+
+.table-animation:hover {
+  animation-name: rounded-circle-zoom;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  /*keyframe animation eds here*/
+}
+
+@keyframes rounded-circle-zoom {
+  0%{transform: scale(1); opacity: 1;}
+  50% {transform: scale(1.1); opacity: 1;}
+  100% {transform: scale(1);}
+}
+/*The End*/
